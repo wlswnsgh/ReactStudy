@@ -1,9 +1,11 @@
-import WheelY from './wheeljsx/WheelY';
+import DropandDrop from './DropAndDrop/DropandDrop';
+// import WheelY from './wheeljsx/WheelY';
 
 function App() {
   return (
     <>
-      <WheelY />
+      {/* <WheelY /> */}
+      <DropandDrop />
     </>
   );
 }
