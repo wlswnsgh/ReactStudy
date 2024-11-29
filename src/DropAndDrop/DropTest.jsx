@@ -41,14 +41,14 @@ const DragItems = styled.div`
     margin-bottom: 2px;
     font-size: 35px;
     text-align: center;
-`;
+ `;
 
 function DropTest() {
     const [dragUI, setDragUI] = useState([
         { id: 1, value: 'item1' },
         { id: 2, value: 'item2' },
         { id: 3, value: 'item3' },
-        { id: 4, value: 'item4' }
+        { id: 4, value: 'item4' },
     ]);
 
     const [dragBin, setDragBin] = useState([]);
@@ -67,6 +67,13 @@ function DropTest() {
     //     const items = data.dataTransfer.getData('text/plain'); // 아이템 가져오기
     //     setDragUI((event) => event.filter((i) =>(i !== items))); // UI 삭제
     //     setDragBin((event) => ([...event, items])); // 빈베열에 추가
+    // };
+
+    // 이 코드가 안되는 이유 getData('text/plain', items) items라는 두번째 매개변수를 받아올 수가 없기 때문이다.
+    // const handDrag_2 = (data, items) => {
+    //     data.dataTransfer.getData('text/plain', items);
+    //     setDragUI((event) => event.filter((i) =>(i !== items)));
+    //     setDragBin((event) => ([...event, items]));
     // };
 
     const handDrag_1 = (data) => {
@@ -90,13 +97,6 @@ function DropTest() {
             setDragBin((prev) => [...prev, movedItem]);
         }
     };    
-
-    // 이 코드가 안되는 이유 getData('text/plain', items) items라는 두번째 매개변수를 받아올 수가 없기 때문이다.
-    // const handDrag_2 = (data, items) => {
-    //     data.dataTransfer.getData('text/plain', items);
-    //     setDragUI((event) => event.filter((i) =>(i !== items)));
-    //     setDragBin((event) => ([...event, items]));
-    // };
 
     const handleDragOver = (event) => {
         event.preventDefault();

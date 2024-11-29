@@ -1,5 +1,6 @@
-import DropandDrop from './DropAndDrop/DropandDrop';
-import DropTest from './DropAndDrop/DropTest';
+import Canvas from './Canvas/Canvas';
+// import DropandDrop from './DropAndDrop/DropandDrop';
+// import DropTest from './DropAndDrop/DropTest';
 // import WheelY from './wheeljsx/WheelY';
 
 function App() {
@@ -7,7 +8,8 @@ function App() {
     <>
       {/* <WheelY /> */}
       {/* <DropandDrop /> */}
-      <DropTest />
+      {/* <DropTest /> */}
+      <Canvas />
     </>
   );
 }
